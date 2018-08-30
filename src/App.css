@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.Header {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Close-btn {
+  margin-right: auto;
+  border: 1px solid red;
+}
