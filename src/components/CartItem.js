@@ -5,21 +5,20 @@ import '../App.css'
 class CartItem extends Component {
   constructor(props) {
     super(props);
+    
     this.state = {
-      name: props.item.name,
-      imgUrl: props.item.imgUrl,
-      price: props.item.price,
-      quantity: props.item.quantity
+      item: props,
     }
   }
   render() {
+    const {item} = this.state.item
     return (
       <div>
-        <img src={this.state.imgUrl}/>
-        <span>{this.state.name}</span>
+        <img src={item.imgUrl} alt={item.name}/>
+        <span>{item.name}</span>
         <div className='quantity-container'>
           <QuantityButton content="-"/>
-          <span>{this.state.quantity}</span>
+          <span>{item.quantity}</span>
           <QuantityButton content="+"/>
         </div>
       </div>
